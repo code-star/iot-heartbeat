@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/iot-heartbeat/static/css/main.84543338.chunk.css",
+    "main.js": "/iot-heartbeat/static/js/main.636e58b3.chunk.js",
+    "main.js.map": "/iot-heartbeat/static/js/main.636e58b3.chunk.js.map",
+    "runtime-main.js": "/iot-heartbeat/static/js/runtime-main.6fc6ebd6.js",
+    "runtime-main.js.map": "/iot-heartbeat/static/js/runtime-main.6fc6ebd6.js.map",
+    "static/js/2.75e2b9c8.chunk.js": "/iot-heartbeat/static/js/2.75e2b9c8.chunk.js",
+    "static/js/2.75e2b9c8.chunk.js.map": "/iot-heartbeat/static/js/2.75e2b9c8.chunk.js.map",
+    "static/js/3.8eae35a9.chunk.js": "/iot-heartbeat/static/js/3.8eae35a9.chunk.js",
+    "static/js/3.8eae35a9.chunk.js.map": "/iot-heartbeat/static/js/3.8eae35a9.chunk.js.map",
+    "index.html": "/iot-heartbeat/index.html",
+    "static/css/main.84543338.chunk.css.map": "/iot-heartbeat/static/css/main.84543338.chunk.css.map",
+    "static/js/2.75e2b9c8.chunk.js.LICENSE.txt": "/iot-heartbeat/static/js/2.75e2b9c8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6fc6ebd6.js",
+    "static/js/2.75e2b9c8.chunk.js",
+    "static/css/main.84543338.chunk.css",
+    "static/js/main.636e58b3.chunk.js"
+  ]
+}
