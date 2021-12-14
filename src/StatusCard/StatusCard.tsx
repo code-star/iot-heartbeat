@@ -4,8 +4,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { CircularProgress, Grid, IconButton } from '@mui/material';
-import { Alarm as AlarmIcon, Check as CheckIcon } from '@mui/icons-material';
+import { CircularProgress, Grid, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import { Close as CloseIcon, Check as CheckIcon, ContentCopy as ContentCopyIcon, Grid3x3 as Grid3x3Icon, DevicesOther as DevicesOtherIcon } from '@mui/icons-material';
 
 const wait = (delay: number) => new Promise((resolve) => {
     setTimeout(() => { resolve("done") }, delay);
@@ -13,7 +13,7 @@ const wait = (delay: number) => new Promise((resolve) => {
 
 const Loader = () => {
     return <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }}>
-        <CircularProgress color="secondary" size={140} />
+        <CircularProgress color="primary" size={140} />
     </div>
 }
 
@@ -46,8 +46,8 @@ export default function StatusCard() {
                                 <Grid item>
                                     {/* button (pulse)
                                                           */}
-                                    <Button variant="contained" color="success" size="large">
-                                        <CheckIcon />
+                                    <Button variant="contained" color={deviceState ? "success" : "error"} size="large">
+                                        {deviceState ? <CheckIcon /> : <CloseIcon />}
                                     </Button>
                                 </Grid>
                                 <Grid item xs>
@@ -57,11 +57,24 @@ export default function StatusCard() {
                             <Typography sx={{ mb: 1.5 }} color="text.secondary" style={{ fontSize: "160%" }}>
                                 Location: Westfields Oirschot
                             </Typography>
-                            <Typography variant="body2" gutterBottom style={{ fontSize: "140%" }}>
-                                serialnr 2454ae245afh141145
-                                <br />
-                                type NUC
-                            </Typography>
+                            <List>
+                                <ListItem disableGutters secondaryAction={<IconButton edge="end"><ContentCopyIcon /></IconButton>}>
+                                    <ListItemButton>
+                                        <ListItemIcon>
+                                            <Grid3x3Icon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="2454ae245afh141145" primaryTypographyProps={{ style: { fontSize: "140%" } }}></ListItemText>
+                                    </ListItemButton>
+                                </ListItem>
+                                <ListItem disableGutters secondaryAction={<IconButton edge="end"><ContentCopyIcon /></IconButton>}>
+                                    <ListItemButton>
+                                        <ListItemIcon>
+                                            <DevicesOtherIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="NUC" primaryTypographyProps={{ style: { fontSize: "140%" } }}></ListItemText>
+                                    </ListItemButton>
+                                </ListItem>
+                            </List>
                         </>}
                 </CardContent>
             </Card>
