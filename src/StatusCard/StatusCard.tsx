@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { CircularProgress, Grid, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import { CircularProgress, Grid, IconButton, LinearProgress, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import { Close as CloseIcon, Check as CheckIcon, ContentCopy as ContentCopyIcon, Grid3x3 as Grid3x3Icon, DevicesOther as DevicesOtherIcon } from '@mui/icons-material';
 
 const wait = (delay: number) => new Promise((resolve) => {
@@ -18,10 +18,13 @@ const Loader = () => {
 }
 
 export default function StatusCard() {
-    const [isLoading, setIsLoading] = React.useState(false);
-    const [deviceState, setDeviceState] = React.useState(false);
+    const [isPreparing, setIsPreparing] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [deviceState, setDeviceState] = useState(false);
     const handleClick = async () => {
+        setIsPreparing(true);
         await wait(5000);
+        setIsPreparing(false);
         setIsLoading(true);
         setDeviceState(true);
         await wait(1000);
@@ -39,9 +42,6 @@ export default function StatusCard() {
                             <Typography variant="h5" component="div" style={{ fontSize: "300%" }}>
                                 IP 10.0.100.1
                             </Typography>
-                            {/* <Typography gutterBottom>
-                                <strong>{deviceState ? "CONNECTED" : "DISCONNECTED"}</strong>
-                            </Typography> */}
                             <Grid container gap={2} my={4}>
                                 <Grid item>
                                     {/* button (pulse)
@@ -51,7 +51,7 @@ export default function StatusCard() {
                                     </Button>
                                 </Grid>
                                 <Grid item xs>
-                                    <Button variant="outlined" fullWidth size="large">{deviceState ? "CONNECTED" : "DISCONNECTED"}</Button>
+                                    <Button variant="outlined" fullWidth size="large" sx={{ backgroundColor: "#001E3C", color: "rgb(191, 199, 207)" }}>{deviceState ? "CONNECTED" : "DISCONNECTED"}</Button>
                                 </Grid>
                             </Grid>
                             <Typography sx={{ mb: 1.5 }} color="text.secondary" style={{ fontSize: "160%" }}>
@@ -63,7 +63,7 @@ export default function StatusCard() {
                                         <ListItemIcon>
                                             <Grid3x3Icon />
                                         </ListItemIcon>
-                                        <ListItemText primary="2454ae245afh141145" primaryTypographyProps={{ style: { fontSize: "140%" } }}></ListItemText>
+                                        <ListItemText primary="123e4567-e89b-12d3-a456-426655440000" primaryTypographyProps={{ style: { fontSize: "120%" } }}></ListItemText>
                                     </ListItemButton>
                                 </ListItem>
                                 <ListItem disableGutters secondaryAction={<IconButton edge="end"><ContentCopyIcon /></IconButton>}>
@@ -71,11 +71,12 @@ export default function StatusCard() {
                                         <ListItemIcon>
                                             <DevicesOtherIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="NUC" primaryTypographyProps={{ style: { fontSize: "140%" } }}></ListItemText>
+                                        <ListItemText primary="Intel NUC" primaryTypographyProps={{ style: { fontSize: "140%" } }}></ListItemText>
                                     </ListItemButton>
                                 </ListItem>
                             </List>
                         </>}
+                    {isPreparing && <LinearProgress sx={{ height: "2px", width: "3px" }} />}
                 </CardContent>
             </Card>
         </Box>

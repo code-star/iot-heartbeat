@@ -33,7 +33,7 @@ const SvgComponent = (props: any) => (
 export default function AppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <MuiAppBar position="static">
+      <MuiAppBar position="static" sx={{ background: "#0A1929", boxShadow: "none", borderBottom: "1px solid #265D97" }}>
         <Toolbar>
           <IconButton
             size="large"

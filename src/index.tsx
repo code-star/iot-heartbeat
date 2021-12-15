@@ -3,17 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Box, createTheme, ThemeProvider } from '@mui/material';
-
-const theme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-});
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { brandingDarkTheme } from './theme';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={brandingDarkTheme}>
+      <CssBaseline />
       <App />
     </ThemeProvider>
   </React.StrictMode >,

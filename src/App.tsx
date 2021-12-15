@@ -1,7 +1,5 @@
-import { Container } from '@mui/material';
 import React from 'react';
-// import logo from './logo.svg';
-import './App.css';
+import { Container } from '@mui/material';
 import AppBar from './AppBar/AppBar';
 import StatusCard from './StatusCard/StatusCard';
 
