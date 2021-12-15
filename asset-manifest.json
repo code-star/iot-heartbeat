@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/iot-heartbeat/static/css/main.84543338.chunk.css",
-    "main.js": "/iot-heartbeat/static/js/main.ced2e297.chunk.js",
-    "main.js.map": "/iot-heartbeat/static/js/main.ced2e297.chunk.js.map",
-    "runtime-main.js": "/iot-heartbeat/static/js/runtime-main.1bd14150.js",
-    "runtime-main.js.map": "/iot-heartbeat/static/js/runtime-main.1bd14150.js.map",
-    "static/js/2.965923c7.chunk.js": "/iot-heartbeat/static/js/2.965923c7.chunk.js",
-    "static/js/2.965923c7.chunk.js.map": "/iot-heartbeat/static/js/2.965923c7.chunk.js.map",
-    "static/js/3.7ceacd88.chunk.js": "/iot-heartbeat/static/js/3.7ceacd88.chunk.js",
-    "static/js/3.7ceacd88.chunk.js.map": "/iot-heartbeat/static/js/3.7ceacd88.chunk.js.map",
+    "main.css": "/iot-heartbeat/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/iot-heartbeat/static/js/main.4373b77d.chunk.js",
+    "main.js.map": "/iot-heartbeat/static/js/main.4373b77d.chunk.js.map",
+    "runtime-main.js": "/iot-heartbeat/static/js/runtime-main.53983c35.js",
+    "runtime-main.js.map": "/iot-heartbeat/static/js/runtime-main.53983c35.js.map",
+    "static/js/2.10bd7ff0.chunk.js": "/iot-heartbeat/static/js/2.10bd7ff0.chunk.js",
+    "static/js/2.10bd7ff0.chunk.js.map": "/iot-heartbeat/static/js/2.10bd7ff0.chunk.js.map",
+    "static/js/3.28cc4ecc.chunk.js": "/iot-heartbeat/static/js/3.28cc4ecc.chunk.js",
+    "static/js/3.28cc4ecc.chunk.js.map": "/iot-heartbeat/static/js/3.28cc4ecc.chunk.js.map",
     "index.html": "/iot-heartbeat/index.html",
-    "static/css/main.84543338.chunk.css.map": "/iot-heartbeat/static/css/main.84543338.chunk.css.map",
-    "static/js/2.965923c7.chunk.js.LICENSE.txt": "/iot-heartbeat/static/js/2.965923c7.chunk.js.LICENSE.txt"
+    "static/css/main.6dea0f05.chunk.css.map": "/iot-heartbeat/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.10bd7ff0.chunk.js.LICENSE.txt": "/iot-heartbeat/static/js/2.10bd7ff0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1bd14150.js",
-    "static/js/2.965923c7.chunk.js",
-    "static/css/main.84543338.chunk.css",
-    "static/js/main.ced2e297.chunk.js"
+    "static/js/runtime-main.53983c35.js",
+    "static/js/2.10bd7ff0.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.4373b77d.chunk.js"
   ]
 }
